@@ -17,6 +17,7 @@ namespace QuanLyTruongHoc.Forms.FormSinhVien
     internal class ListSinhVienForm : BaseListForm
     {
         private System.Windows.Forms.BindingSource sinhVienBindingSource;
+        private BindingSource khoaBindingSource;
         private System.ComponentModel.IContainer components;
         public ListSinhVienForm()
         {
@@ -37,23 +38,38 @@ namespace QuanLyTruongHoc.Forms.FormSinhVien
         {
             this.components = new System.ComponentModel.Container();
             this.sinhVienBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.khoaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sinhVienBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.khoaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Size = new System.Drawing.Size(828, 238);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.panel1.Size = new System.Drawing.Size(932, 425);
+            // 
+            // search_btn
+            // 
+            this.search_btn.Click += new System.EventHandler(this.search_btn_Click_1);
             // 
             // sinhVienBindingSource
             // 
             this.sinhVienBindingSource.DataSource = typeof(QuanLyTruongHoc.DataObjects.SinhVien);
             // 
+            // khoaBindingSource
+            // 
+            this.khoaBindingSource.DataSource = typeof(QuanLyTruongHoc.DataObjects.Khoa);
+            // 
             // ListSinhVienForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.ClientSize = new System.Drawing.Size(828, 450);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.ClientSize = new System.Drawing.Size(932, 562);
+            this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "ListSinhVienForm";
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.sinhVienBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.khoaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -115,6 +131,13 @@ namespace QuanLyTruongHoc.Forms.FormSinhVien
                 MessageBox.Show("Không có sinh viên nào được chọn");
             }
         }
+        protected override void add_btn_Click(object sender, EventArgs e)
+        {
+            base.add_btn_Click(sender, e);
+        }
+        private void search_btn_Click_1(object sender, EventArgs e)
+        {
 
+        }
     }
 }

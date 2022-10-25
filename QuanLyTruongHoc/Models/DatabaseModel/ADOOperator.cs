@@ -123,6 +123,7 @@ namespace QuanLyTruongHoc.Models.DatabaseModel
                     {
                         command.Parameters.AddRange(sqlParameters);
                     }
+                    command.ExecuteNonQuery();
                     return true;
                 }
 

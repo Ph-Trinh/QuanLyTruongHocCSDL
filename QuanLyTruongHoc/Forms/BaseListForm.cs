@@ -61,5 +61,10 @@ namespace QuanLyTruongHoc.Forms
         {
 
         }
+
+        protected virtual void add_btn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

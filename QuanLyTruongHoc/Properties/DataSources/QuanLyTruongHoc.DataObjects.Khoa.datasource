@@ -7,4 +7,16 @@
 -->
 <GenericObjectDataSource DisplayName="Khoa" Version="1.0" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
    <TypeInfo>QuanLyTruongHoc.DataObjects.Khoa, QuanLyTruongHoc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
+   <TypeUISetting>
+      <PropertyUISettings>
+         <PropertyUISetting Name="MaKhoa">
+            <ControlSettings>
+               <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
+                  <BindableControlInfo Name="TextEdit" Type="DevExpress.XtraEditors.TextEdit" AssemblyName="DevExpress.XtraEditors.v19.2" />
+               </ControlSetting>
+            </ControlSettings>
+         </PropertyUISetting>
+      </PropertyUISettings>
+   </TypeUISetting>
+
 </GenericObjectDataSource>
